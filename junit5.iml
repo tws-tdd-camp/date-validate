@@ -24,11 +24,11 @@
     <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
-          <root url="jar:///Users/wjlin/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-all/1.3/63a21ebc981131004ad02e0434e799fd7f3a8d5a/hamcrest-all-1.3.jar!/"/>
+          <root url="jar:///Users/wjlin/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.9.0/de324a44efe19b9222d2218f7ac3102d728497d8/assertj-core-3.9.0.jar!/"/>
         </CLASSES>
         <JAVADOC/>
         <SOURCES>
-          <root url="jar:///Users/wjlin/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-all/1.3/47e033b7ab18c5dbd5fe29fc1bd5a40afe028818/hamcrest-all-1.3-sources.jar!/"/>
+          <root url="jar:///Users/wjlin/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.9.0/7eefa834515f5adb0a14713b9c3cf9aa565530d8/assertj-core-3.9.0-sources.jar!/"/>
         </SOURCES>
       </library>
     </orderEntry>

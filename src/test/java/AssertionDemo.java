@@ -1,9 +1,5 @@
 import org.junit.jupiter.api.*;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.core.AllOf.allOf;
-import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AssertionDemo {
