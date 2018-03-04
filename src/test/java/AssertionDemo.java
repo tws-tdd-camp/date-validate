@@ -1,13 +1,13 @@
-import org.junit.jupiter.api.*;
+import org.junit.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 public class AssertionDemo {
 
     @Test
     void basic() {
         assertEquals(1 + 1, 2);
-        assertEquals(1 + 1, 2, () -> "message");
+        assertEquals("message", 1 + 1, 2);
         assertFalse(1 > 2);
         assertTrue(1 < 2);
         assertNull(null);
@@ -17,22 +17,22 @@ public class AssertionDemo {
         assertArrayEquals(new int[] {1, 2, 3}, new int[] {1, 2, 3});
     }
 
-    @BeforeAll
+    @BeforeClass
     static void beforeAll() {
         System.out.println("Before All");
     }
 
-    @AfterAll
+    @AfterClass
     static void afterAll() {
         System.out.println("After All");
     }
 
-    @BeforeEach
+    @Before
     void beforeEach() {
         System.out.println("Before Each");
     }
 
-    @AfterEach
+    @After
     void afterEach() {
         System.out.println("After Each");
     }
