@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 public class AssertionDemo {
 
     @Test
-    void basic() {
+    public void basic() {
         assertEquals(1 + 1, 2);
         assertEquals("message", 1 + 1, 2);
         assertFalse(1 > 2);
@@ -18,23 +18,22 @@ public class AssertionDemo {
     }
 
     @BeforeClass
-    static void beforeAll() {
+    public static void beforeAll() {
         System.out.println("Before All");
     }
 
     @AfterClass
-    static void afterAll() {
+    public static void afterAll() {
         System.out.println("After All");
     }
 
     @Before
-    void beforeEach() {
+    public void beforeEach() {
         System.out.println("Before Each");
     }
 
     @After
-    void afterEach() {
+    public void afterEach() {
         System.out.println("After Each");
     }
-
 };
