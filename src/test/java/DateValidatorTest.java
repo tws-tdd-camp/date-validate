@@ -2,15 +2,10 @@ import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestFactory;
 
-import java.lang.annotation.Annotation;
-import java.lang.reflect.AnnotatedType;
-import java.lang.reflect.Executable;
-import java.lang.reflect.TypeVariable;
 import java.util.*;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.in;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 
@@ -23,23 +18,9 @@ import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 
 class DateValidatorTest {
 
-    private boolean validate(String date) {
-        if(date.isEmpty()) {
-            return false;
-        }
-
-        Integer intDate = Integer.valueOf(date);
-
-        if(intDate < 199001 || intDate > 204912) {
-            throw new IllegalArgumentException("validate date");
-        }
-
-        return true;
-    }
-
     @Test
     void should_return_true_if_data_is_correct() {
-        assertThat(validate("")).isFalse();
+        assertThat(DateValidator.validate("")).isFalse();
     }
 
     @TestFactory
@@ -51,7 +32,7 @@ class DateValidatorTest {
 
         return dateStrList.stream().map((str) -> {
             return dynamicTest("should_return_true_if_date_is_" + str, ()-> {
-                assertThat(validate(str)).isTrue();
+                assertThat(DateValidator.validate(str)).isTrue();
             });
         });
     }
@@ -66,7 +47,7 @@ class DateValidatorTest {
 
         return dateStrList.stream().map((str)-> {
             return dynamicTest("should_throw_exception_when_data_is_" + str, ()-> {
-                assertThrows(IllegalArgumentException.class, ()-> validate(str));
+                assertThrows(IllegalArgumentException.class, ()-> DateValidator.validate(str));
             });
 
         });
