@@ -1,5 +1,4 @@
-import org.junit.Test;
-import org.mockito.Mock;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.util.Random;
